@@ -9,11 +9,17 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@tsparticles/all": "^3.9.1",
+    "@tsparticles/react": "^3.0.0",
     "next": "16.1.1",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "react-tsparticles": "^2.12.2",
+    "tsparticles": "^3.9.1",
+    "tsparticles-engine": "^2.12.0"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.1.1"

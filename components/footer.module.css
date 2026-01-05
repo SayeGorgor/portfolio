@@ -1,0 +1,43 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    background-color: rgb(32, 32, 32);
+    color: white;
+}
+
+.body h2 {
+    margin-bottom: 1rem;
+}
+
+.links {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    width: 4rem;
+    border: 2px solid white;
+    border-radius: 2rem;
+    background-color: white;
+}
+
+.link:hover {
+    cursor: pointer;
+    transform: scale(1.02, 1.02);
+}
+
+.link-logo {
+    height: 100%;
+    width: auto;
+}
+
+.github-logo {
+    margin-bottom: .12rem;
+}
