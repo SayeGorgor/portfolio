@@ -213,7 +213,7 @@
 
 /* PROJECTS SECTION */
 .projects-section h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .projects-list {
@@ -387,4 +387,110 @@
 
 .submit-btn:hover.submit-btn::before {
   clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0) !important;
+}
+
+/* MEDIA QUERIES */
+@media(max-width: 1140px) {
+  .about-section-content {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+
+  .description p {
+    max-width: 80vw;
+    margin-top: 1rem;
+  }
+}
+
+@media(max-width: 750px) {
+  .section {
+    padding: 0 5vw;
+  }
+
+  .project-card {
+    max-width: 90vw;
+  }
+
+  .about-section,
+  .projects-section {
+    margin-top: 5rem;
+  }
+
+  .description p {
+    max-width: none;
+    font-size: clamp(.8rem, calc(4.8vw + .1rem), 1.5rem);
+  }
+}
+
+@media(max-width: 580px) {
+  .contact-section p {
+    width: 100%;
+  }
+  
+  .skill-card {
+    /* height: 8rem; */
+    height: clamp(3.2rem, calc(29vw * .8), 8rem);
+    /* width: 10rem; */
+    width: clamp(4rem, 29vw, 10rem);
+    font-size: clamp(.75rem, calc(1.8vw + .4rem), 1rem);
+  }
+
+  .skills-logo {
+    height: clamp(2.5rem, 15vw, 5rem);
+    width: clamp(2.5rem, 15vw, 5rem);
+  }
+
+  .skills-grid {
+    gap: .75rem;
+  }
+
+  /* .contact-section {
+    padding: 0 5vw;
+  } */
+
+  .contact-form {
+    max-width: 100%;
+  }
+}
+
+@media(max-width: 500px) {
+  .project-card-title-container {
+    max-height: none;
+  }
+
+  .projects-list li {
+    position: sticky;
+    top: calc(((var(--p-index) * 4 + 1) * 1rem) + 5rem);
+  }
+
+  .split-text {
+    font-weight: bolder;
+    /* font-size: 2.1rem; */
+    font-size: clamp(1rem, calc(6vw + .1rem), 2.1rem);
+  }
+
+  .go-to-link-icon {
+    height: clamp(.9rem, calc(2.5vw + .9rem), 2rem);
+  }
+
+  .project-title-dupe {
+    display: none !important;
+  }
+
+  .tech-stack-card,
+  .project-card-description {
+    font-size: 1rem;
+  }
+}
+
+@media(max-width: 420px) {
+  .split-text {
+    font-size: 1.7rem;
+  }
+}
+
+@media(max-width: 400px) {
+  .split-text {
+    font-size: 1.5rem;
+  }
 }

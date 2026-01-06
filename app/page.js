@@ -256,7 +256,9 @@ export default function Home() {
                     <SplitText text='msgME Messenger App' href='https://msgme2.vercel.app' />
                     <GoToLinkIcon className={styles['go-to-link-icon']} />
                   </div>
-                  <SplitText className={styles['project-title-dupe']} text='msgME Messenger App' />
+                  <div className={styles['project-title-dupe']}>
+                    <SplitText text='msgME Messenger App' />
+                  </div>
                 </div>
                 <ul className={styles['tech-stack-list']}>
                   <li>
@@ -317,7 +319,9 @@ export default function Home() {
                     <SplitText text='AX2 Task Manager' href='https://ax2.onrender.com' />
                     <GoToLinkIcon className={styles['go-to-link-icon']} />
                   </div>
-                  <SplitText className={styles['project-title-dupe']} text='AX2 Task Manager' />
+                  <div className={styles['project-title-dupe']}>
+                    <SplitText text='AX2 Task Manager' />
+                  </div>
                 </div>
                 <ul className={styles['tech-stack-list']}>
                   <li>
@@ -365,7 +369,9 @@ export default function Home() {
                     <SplitText text='KSUVSA Website' href='https://ksuvsa.vercel.app' />
                     <GoToLinkIcon className={styles['go-to-link-icon']} />
                   </div>
-                  <SplitText className={styles['project-title-dupe']} text='KSUVSA Website' />
+                  <div className={styles['project-title-dupe']}>
+                    <SplitText text='KSUVSA Website' />
+                  </div>
                 </div>
                 <ul className={styles['tech-stack-list']}>
                   <li>
@@ -402,7 +408,9 @@ export default function Home() {
                     <SplitText text='RTL Films Website' href='https://sayegorgor.github.io/rtlfilms/' />
                     <GoToLinkIcon className={styles['go-to-link-icon']} />
                   </div>
-                  <SplitText className={styles['project-title-dupe']} text='RTL Films Website' />
+                  <div className={styles['project-title-dupe']}>
+                    <SplitText text='RTL Films Website' />
+                  </div>
                 </div>
                 <ul className={styles['tech-stack-list']}>
                   <li>
