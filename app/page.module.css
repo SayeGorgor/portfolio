@@ -61,7 +61,7 @@
 }
 
 .hero span {
-  color: blue;
+  color: rgb(11, 125, 255);
 }
 
 .view-work-btn {
@@ -70,8 +70,8 @@
   padding: .6rem 2rem;
   font-size: 1.5rem;
   background-color: #141414;
-  color: blue;
-  border: 2px solid blue;
+  color: rgb(11, 125, 255);;
+  border: 2px solid rgb(11, 125, 255);;
 }
 
 .view-work-btn::before {
@@ -85,7 +85,7 @@
   height: 100%;
   width: 102%;
   font-size: 1.5rem;
-  background-color: blue;
+  background-color: rgb(11, 125, 255);
   color: white;
   clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
   transition: clip-path .65s ease;
@@ -172,7 +172,7 @@
   border-radius: 1rem;
   opacity: 0;
   background: linear-gradient(rgb(18, 18, 18), rgb(18, 18, 18)) padding-box,
-              linear-gradient(45deg, blue) border-box;
+              linear-gradient(45deg, rgb(11, 125, 255)) border-box;
   transition: opacity .5s ease;
 }
 
@@ -189,7 +189,7 @@
 
 .skill-card:hover {
   background: linear-gradient(rgb(18, 18, 18), rgb(18, 18, 18)) padding-box,
-              linear-gradient(135deg, blue, red) border-box;
+              linear-gradient(135deg, rgb(11, 125, 255), red) border-box;
   background-size: 300% 300%;
   animation: borderDraw 3s ease infinite alternate
 }
@@ -294,8 +294,8 @@
 
 .tech-stack-card {
   padding: .5rem;
-  background-color: blue;
-  color: white;
+  background-color: rgb(11, 125, 255);
+  color: black;
   border: 1.5px solid black;
   border-radius: .5rem;
 }
@@ -358,8 +358,8 @@
   height: 2.5rem;
   font-size: 1.2rem;
   background-color: transparent;
-  color: blue;
-  border: 3px solid blue;
+  color: rgb(11, 125, 255);
+  border: 3px solid rgb(11, 125, 255);
   border-radius: .5rem;
 }
 
@@ -374,7 +374,7 @@
   height: 101%;
   width: 101.1%;
   font-size: 1.2rem;
-  background-color: blue;
+  background-color: rgb(11, 125, 255);;
   color: white;
   clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
   border-radius: .4rem;
@@ -399,6 +399,14 @@
   .description p {
     max-width: 80vw;
     margin-top: 1rem;
+  }
+}
+
+@media(max-width: 800px) {
+  .hero h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    margin: 1rem;
   }
 }
 
@@ -444,16 +452,20 @@
     gap: .75rem;
   }
 
-  /* .contact-section {
-    padding: 0 5vw;
-  } */
-
   .contact-form {
     max-width: 100%;
   }
 }
 
 @media(max-width: 500px) {
+  .hero h1 {
+    font-size: clamp(2rem, calc(5vw + 1rem), 2.5rem);
+  }
+
+  .view-work-btn {
+    font-size: clamp(1.1rem, calc((5vw + 1rem) * .7), 1.5rem);
+  }
+
   .project-card-title-container {
     max-height: none;
   }
