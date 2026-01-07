@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import styles from './header.module.css';
 import { useActiveSection } from '@/lib/helpers/helpers';
 
@@ -35,7 +35,11 @@ export default function Header() {
                                         styles.prevLeft : styles.prevRight
                                     }
                                 `}
-                                style={{'--link-index': index}}
+                                style={{
+                                    '--link-index': index,
+                                    '--link-name': section
+                                }}
+                                data-link-name={section}
                             >
                                 {section.charAt(0).toUpperCase() + section.slice(1)}
                             </a>

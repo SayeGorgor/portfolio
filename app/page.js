@@ -454,7 +454,7 @@ export default function Home() {
             Have a question or interested in working together? Send me a message and
             I'll get back as soon as possible!
           </p>
-          <form className={styles['contact-form']}>
+          <form className={styles['contact-form']} onSubmit={e => e.preventDefault()}>
             <input 
               type="name" 
               value={name} 
