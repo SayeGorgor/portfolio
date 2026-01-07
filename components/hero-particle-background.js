@@ -21,43 +21,31 @@ export default function HeroParticleBackground() {
 
   return (
     <Particles
-      className={styles['particle-background']}
+      id='hero-particles'
+      className={`
+        ${styles['particle-background']}
+        ${styles['larger-screen']}
+      `}
       options={{
-        // Fullscreen canvas
-        fullScreen: {
-          enable: false,
-          zIndex: -1, // ensures it stays behind your content
-        },
-        background: {
-          color: '#141414', // dark background
-        },
+        fullScreen: { enable: false, zIndex: -1 },
+        background: { color: '#141414' },
         fpsLimit: 60,
         particles: {
-          number: { value: 250, density: { enable: true, area: 1000 } },
-          color: { value: '#b7e2ffff' }, // white particles
+          number: { value: 300, density: { enable: true, area: 1000 } },
+          color: { value: '#b7e2ffff' },
           shape: { type: 'circle' },
           opacity: { 
             value: 0, 
-            random: false,
-            animation: {
-              enable: true,
-              speed: 2,
-              easing: "ease-out-circ"
-            }
+            random: false
           },
           size: { value: 1.2, random: true },
-          move: { enable: true, speed: 1, direction: 'none', outModes: { default: 'out' } },
-          links: {
-            enable: true,
-            opacity: 0,
-            color: { value: '#bbd6ffff' },
-            distance: 140
+          move: { 
+            enable: true, 
+            speed: 0.5, 
+            direction: 'none', 
+            outModes: { default: 'out' } 
           },
-          shadow: {
-            enable: true,
-            blur: 1,
-            color: { value: 'rgba(206, 226, 255, 0)' }
-          }
+          links: {enable: false},
         },
         interactivity: {
             events: {
@@ -82,24 +70,48 @@ export default function HeroParticleBackground() {
               grab: {
                 distance: 120,
                 links: {opacity: 0.5, color: '#b7e2ffff'}
-              },
-              light: {
-                area: {
-                  gradient: {
-                    start: "rgba(22, 22, 22, 1)",
-                    stop: "rgba(20, 20, 20, 0)"
-                  },
-                  radius: 500
-                },
-                shadow: {
-                  enable: false,
-                  color: "#000000ff",
-                  length: 0
-                }
               }
             },
         },
         detectRetina: true,
+        responsive: [
+          {
+            maxWidth: 480,
+            options: {
+              particles: {
+                number: { value: 150, density: { enable: true, area: 1000 } },
+                opacity: { 
+                  value: {min: 0.3, max: 0.8}, 
+                  random: true
+                },
+              },
+              interactivity: {
+                events: {
+                  onHover: {enable: false, mode: []}
+                },
+                modes: {}
+              }
+            }
+          },
+          {
+            maxWidth: 1024,
+            options: {
+              particles: {
+                number: { value: 200, density: { enable: true, area: 1000 } },
+                opacity: { 
+                  value: {min: 0.3, max: 0.8}, 
+                  random: true
+                },
+              },
+              interactivity: {
+                events: {
+                  onHover: {enable: false, mode: []}
+                },
+                modes: {}
+              }
+            }
+          }
+        ]
       }}
     />
   );

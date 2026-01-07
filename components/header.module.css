@@ -73,7 +73,13 @@
 
 .link.inactive:hover {
     border: 2px solid rgb(11, 125, 255);
+    color: rgb(11, 125, 255);
+    transition: none;
 }
+
+/* .link.active {
+    transition: color .5s ease;
+} */
 
 .link.active.link::before {
     clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);

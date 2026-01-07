@@ -31,13 +31,13 @@ export default function MainParticleBackground() {
           color: { value: ['#b82222ff', '#184d9eff', '#2568ccff'] }, // white particles
           shape: { type: 'circle' },
           opacity: { value: { min: 0.3, max: 0.8 }, random: true },
-          size: { value: 2, random: true },
-          move: { enable: true, speed: 1, direction: 'none', outModes: { default: 'out' } },
+          size: { value: 1.2, random: true },
+          move: { enable: true, speed: 0.5, direction: 'none', outModes: { default: 'out' } },
           links: {
             enable: true,
             opacity: 0.0,
             distance: 140
-          },
+          }
         },
         detectRetina: true,
       }}
