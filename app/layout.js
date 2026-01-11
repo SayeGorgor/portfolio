@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from 'next/script';
 import "./globals.css";
 
 import Footer from "@/components/footer";
@@ -26,6 +27,10 @@ export default function RootLayout({ children }) {
           {children}
         </main>
         <Footer />
+        <Script
+          src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+          strategy='afterInteractive'
+        />
       </body>
     </html>
   );

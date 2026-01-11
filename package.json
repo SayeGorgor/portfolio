@@ -11,12 +11,17 @@
   "dependencies": {
     "@tsparticles/all": "^3.9.1",
     "@tsparticles/react": "^3.0.0",
+    "@upstash/ratelimit": "^2.0.7",
+    "@upstash/redis": "^1.36.1",
+    "dotenv": "^17.2.3",
     "next": "16.1.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-tsparticles": "^2.12.2",
+    "resend": "^6.7.0",
     "tsparticles": "^3.9.1",
-    "tsparticles-engine": "^2.12.0"
+    "tsparticles-engine": "^2.12.0",
+    "zod": "^4.3.5"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",

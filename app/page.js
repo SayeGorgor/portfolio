@@ -7,6 +7,7 @@ import SplitText from "@/components/split-text";
 import HeroParticleBackground from "@/components/hero-particle-background";
 import MainParticleBackground from "@/components/main-particle-background";
 import Header from "@/components/header";
+import ContactForm from "@/components/contact-form";
 
 import CSS3Logo from './(icons)/css3_logo.svg';
 import ExpressLogo from './(icons)/expressjs_logo.svg';
@@ -450,32 +451,11 @@ export default function Home() {
           `}
         >
           <h2>Contact</h2>
-          <p>
+          <p className={styles['contact-description']}>
             Have a question or interested in working together? Send me a message and
             I'll get back as soon as possible!
           </p>
-          <form className={styles['contact-form']} onSubmit={e => e.preventDefault()}>
-            <input 
-              type="name" 
-              value={name} 
-              onChange={(e) => setName(e.target.value)}
-              placeholder="Name" 
-            />
-            <input 
-              type="email" 
-              value={email} 
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Email" 
-            />
-            <textarea 
-              name='message'
-              rows={8}
-              value={message} 
-              onChange={(e) => setMessage(e.target.value)}
-              placeholder="Message..."
-            />
-            <button type='submit' className={styles['submit-btn']}>Submit</button>
-          </form>
+          <ContactForm />
         </section>
       </div>
     </div>
