@@ -54,7 +54,7 @@ export default function Home() {
     <div className={styles.page}>
       <section id='hero' className={styles.hero}>
         <HeroParticleBackground />
-        <h1>Hello, I'm <span>Saye</span><br />An aspiring fullstack developer</h1>
+        <h1>Hello, I'm <span>Saye</span><br />An aspiring full stack developer</h1>
         <a 
           className={styles['view-work-btn']}
           href="#about"
