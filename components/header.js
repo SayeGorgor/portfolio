@@ -4,15 +4,16 @@ import { useEffect } from 'react';
 import styles from './header.module.css';
 import { useActiveSection } from '@/lib/helpers/helpers';
 
+const sections = ['hero', 'about', 'projects', 'contact'];
+
 export default function Header() {
-    const sections = ['hero', 'about', 'projects', 'contact'];
     const {previousSection, activeSection} = useActiveSection(sections);
 
     useEffect(() => {
         console.log('Sections but from the header: ', previousSection, activeSection);
         console.log('Active: ', activeSection, ' Index: ', sections.indexOf(activeSection));
         console.log('Prev: ', previousSection, ' Index: ', sections.indexOf(previousSection));
-    }, [activeSection]);
+    }, [activeSection, previousSection]);
 
     return(
         <nav className={styles.body}>

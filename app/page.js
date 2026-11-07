@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import styles from "./page.module.css";
 import SplitText from "@/components/split-text";
 
@@ -54,7 +55,7 @@ export default function Home() {
     <div className={styles.page}>
       <section id='hero' className={styles.hero}>
         <HeroParticleBackground />
-        <h1>Hello, I'm <span>Saye</span><br />An aspiring full stack developer</h1>
+        <h1>Hello, I&apos;m <span>Saye</span><br />An aspiring full stack developer</h1>
         <a 
           className={styles['view-work-btn']}
           href="#about"
@@ -78,14 +79,20 @@ export default function Home() {
           <div className={styles['about-section-content']}>
             <div className={styles.description}>
               <div className={styles['headshot-wrapper']}>
-                <img src="/photos/headshot.jpg" alt="Saye's headshot" />
+                <Image
+                  src="/photos/headshot.jpg"
+                  alt="Saye's headshot"
+                  width={489}
+                  height={489}
+                  unoptimized
+                />
               </div>
               <p>
-                I'm an aspiring full stack developer with a deep passion for learning 
+                I&apos;m an aspiring full stack developer with a deep passion for learning
                 more about the field of software development and expanding and 
                 sharpening my skillset. I am currently pursuing my B.S. in Computer 
                 Science at Kennesaw State University and enjoy creating projects 
-                that apply both frontend and backend skills. When I'm not at my 
+                that apply both frontend and backend skills. When I&apos;m not at my
                 computer I like to spend my time playing videogames, working out
                 and listening to music.
               </p>
@@ -453,7 +460,7 @@ export default function Home() {
           <h2>Contact</h2>
           <p className={styles['contact-description']}>
             Have a question or interested in working together? Send me a message and
-            I'll get back as soon as possible!
+            I&apos;ll get back as soon as possible!
           </p>
           <ContactForm />
         </section>
