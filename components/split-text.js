@@ -1,17 +1,26 @@
 import styles from '@/app/page.module.css';
 
 export default function SplitText({ text, href }) {
+    const Tag = href ? 'a' : 'span';
+
     return(
-        <a href={href} target='_blank' className={styles['split-text']}>
+        <Tag
+            href={href}
+            target={href ? '_blank' : undefined}
+            rel={href ? 'noopener noreferrer' : undefined}
+            aria-label={href ? text : undefined}
+            className={styles['split-text']}
+        >
             {text.split('').map((char, i) => (
                 <span
                     key={i}
                     className={styles.char}
                     style={{ '--i': i }}
+                    aria-hidden={href ? true : undefined}
                 >
                     {char === ' ' ? '\u00A0' : char}
                 </span>
             ))}
-        </a>
+        </Tag>
     );
 }
