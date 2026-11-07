@@ -1,22 +1,22 @@
 /* ANIMATIONS */
 @keyframes fillLeft {
-    from {clip-path: polygon(100% 100%, 100% 0, 100% 0%, 100 100);}
-    to {clip-path: polygon(100% 100%, 100% 0%, 0% 0%, 0% 100%);}
+    from {clip-path: polygon(100% 100%, 100% 0, calc(100% + var(--wipe-slant)) 0, 100% 100%);}
+    to {clip-path: polygon(100% 100%, 100% 0, 0 0, calc(0% - var(--wipe-slant)) 100%);}
 }
 
 @keyframes clearLeft {
-    from {clip-path: polygon(100% 100%, 100% 0%, 0% 0%, 0% 100%);}
-    to {clip-path: polygon(100% 100%, 100% 0, 100% 0%, 100 100);}
+    from {clip-path: polygon(100% 100%, 100% 0, 0 0, calc(0% - var(--wipe-slant)) 100%);}
+    to {clip-path: polygon(100% 100%, 100% 0, calc(100% + var(--wipe-slant)) 0, 100% 100%);}
 }
 
 @keyframes fillRight{
-    from {clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);}
-    to {clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);}
+    from {clip-path: polygon(0 0, 0 100%, calc(0% - var(--wipe-slant)) 100%, 0 0);}
+    to {clip-path: polygon(0 0, 0 100%, 100% 100%, calc(100% + var(--wipe-slant)) 0);}
 }
 
 @keyframes clearRight {
-    from {clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);}
-    to {clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);}
+    from {clip-path: polygon(0 0, 0 100%, 100% 100%, calc(100% + var(--wipe-slant)) 0);}
+    to {clip-path: polygon(0 0, 0 100%, calc(0% - var(--wipe-slant)) 100%, 0 0);}
 }
 
 .body {
@@ -45,6 +45,8 @@
 } */
 
 .link {
+    /* A fixed edge offset keeps the tilt independent of each label's width. */
+    --wipe-slant: .8rem;
     position: relative;
     border: 2px solid transparent;
     border-radius: .5rem;
