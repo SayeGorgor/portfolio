@@ -57,28 +57,6 @@ portfolio/
 └── package.json
 ```
 
-## Getting Started
-
-**Requirements:** Node.js and npm.
-
-```bash
-git clone https://github.com/SayeGorgor/portfolio.git
-cd portfolio
-npm ci
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-To use the contact form locally, configure the required email and rate-limiting services with your own development environment variables. The website's presentation can be explored without sending a contact request.
-
-### Checks
-
-```bash
-npm run lint
-npm run build
-```
-
 ## Deployment
 
 The project is designed for deployment on Vercel. Configure any required server-side email and Redis environment variables in the deployment settings, and verify the public deployment URL before sharing it.
